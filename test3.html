@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Learning - Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F4F4F4;
+        }
+
+        header {
+            background-color: #FFD9C0;
+            padding: 20px;
+            text-align: center;
+            color: #333;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .question-card {
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .question-card h2 {
+            color: #333;
+            margin-top: 0;
+        }
+
+        .question-card p {
+            color: #666;
+        }
+
+        .options {
+            margin-top: 10px;
+        }
+
+        .options label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .options input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        .submit-button {
+            background-color: #A9BD4D;
+            color: #FFFFFF;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-button:hover {
+            background-color: #FFB4B4;
+        }
+
+        footer {
+            background-color: #FFD9C0;
+            color: #333;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Test 3</h1>
+    </header>
+
+    <main>
+        <div class="question-card">
+            <h2>Question 1</h2>
+            <p>Which of the following is an example of effective business communication?</p>
+            <div class="options">
+                <label>
+                    <input type="radio" name="question1" value="option1">
+                    Sending an email with unclear subject lines and lengthy paragraphs.
+                </label>
+                <label>
+                    <input type="radio" name="question1" value="option2">
+                    Using technical jargon and complex language during a presentation.
+                </label>
+                <label>
+                    <input type="radio" name="question1" value="option3">
+                    Writing a concise and well-structured report for a client.
+                </label>
+                <label>
+                    <input type="radio" name="question1" value="option4">
+                    Speaking in a monotone voice and avoiding eye contact during a meeting.
+                </label>
+            </div>
+        </div>
+
+        <div class="question-card">
+            <h2>Question 2</h2>
+            <p>Which of the following is an essential skill for effective business negotiations?</p>
+            <div class="options">
+                <label>
+                    <input type="radio" name="question2" value="option1">
+                    Interrupting the other party to assert dominance.
+                </label>
+                <label>
+                    <input type="radio" name="question2" value="option2">
+                    Avoiding any compromise to protect personal interests.
+                </label>
+                <label>
+                    <input type="radio" name="question2" value="option3">
+                    Active listening and understanding the needs of both parties.
+                </label>
+                <label>
+                    <input type="radio" name="question2" value="option4">
+                    Using aggressive tactics to intimidate the other party.
+                </label>
+            </div>
+        </div>
+
+        <div class="question-card">
+            <h2>Question 3</h2>
+            <p>Which of the following is an example of good business etiquette?</p>
+            <div class="options">
+                <label>
+                    <input type="radio" name="question3" value="option1">
+                    Showing up late for meetings without prior notice.
+                </label>
+                <label>
+                    <input type="radio" name="question3" value="option2">
+                    Using informal language and slang in professional emails.
+                </label>
+                <label>
+                    <input type="radio" name="question3" value="option3">
+                    Respecting personal space and boundaries in the workplace.
+                </label>
+                <label>
+                    <input type="radio" name="question3" value="option4">
+                    Ignoring the opinions and ideas of colleagues during discussions.
+                </label>
+            </div>
+        </div>
+
+        <div class="question-card">
+            <h2>Question 4</h2>
+            <p>Which of the following is an example of effective teamwork in a business setting?</p>
+            <div class="options">
+                <label>
+                    <input type="radio" name="question4" value="option1">
+                    Working independently without collaborating with others.
+                </label>
+                <label>
+                    <input type="radio" name="question4" value="option2">
+                    Hoarding information and not sharing it with team members.
+                </label>
+                <label>
+                    <input type="radio" name="question4" value="option3">
+                    Actively participating in group discussions and sharing ideas.
+                </label>
+                <label>
+                    <input type="radio" name="question4" value="option4">
+                    Taking credit for others' work and not acknowledging their contributions.
+                </label>
+            </div>
+        </div>
+
+        <div class="question-card">
+            <h2>Question 5</h2>
+            <p>Which of the following is an example of effective business writing?</p>
+            <div class="options">
+                <label>
+                    <input type="radio" name="question5" value="option1">
+                    Using excessive abbreviations and informal language in a professional email.
+                </label>
+                <label>
+                    <input type="radio" name="question5" value="option2">
+                    Writing long, complex sentences without clear organization.
+                </label>
+                <label>
+                    <input type="radio" name="question5" value="option3">
+                    Using clear and concise language to convey the intended message.
+                </label>
+                <label>
+                    <input type="radio" name="question5" value="option4">
+                    Including irrelevant information and digressions in a business report.
+                </label>
+            </div>
+        </div>
+
+        <button class="submit-button" onclick="submitTest()">Kirim</button>
+    </main>
+
+    <footer>
+        &copy; 2023 Online Learning. All rights reserved.
+    </footer>
+    <script>
+        function submitTest() {
+            // Melakukan pengalihan ke halaman "result.html" saat tombol diklik
+            window.location.href = "aftertest.html";
+        }
+    </script>
+</body>
+</html>

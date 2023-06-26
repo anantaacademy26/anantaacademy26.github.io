@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact Us</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #FAF0D7;
+    }
+
+    header {
+      background-color: #F4BFBF;
+      padding: 0px;
+      text-align: left;
+      display: flex;
+      align-items: center;
+    }
+
+    .logo {
+      width: 150px;
+      height: 150px;
+      margin-right: 10px;
+    }
+
+    nav {
+      background-color: #FFD9C0;
+      color: #424242;
+      padding: 10px;
+      text-align: right;
+    }
+    
+    nav a {
+      color: #3b2d2d;
+      text-decoration: none;
+      margin: 10px;
+      background-color: #FFD9C0;
+    }
+    
+    nav a.Courses {
+      background-color: #f30000; /* Warna latar belakang navigasi "Courses" */
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #fff;
+    }
+
+    .contact-info {
+      width: 45%;
+      border-right: 1px solid #ccc; /* Tambahkan garis tipis pemisah di sebelah kanan */
+      padding-right: 20px; /* Berikan ruang padding di sebelah kanan */
+    }
+
+    .contact-info h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .contact-info p {
+      margin-bottom: 10px;
+    }
+
+    .contact-form {
+      width: 45%;
+      padding-right: 30px;
+    }
+
+    .contact-form h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .contact-form input[type="text"],
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: none;
+      border-bottom: 2px solid #A9BD4D;
+      background-color: #f3f3f3;
+      border-radius: 0;
+      transition: border-color 0.3s ease;
+      padding-right: 10px;
+    }
+
+    .contact-form input[type="text"]:focus,
+    .contact-form textarea:focus {
+      border-color: #FFB4B4;
+      outline: none;
+    }
+
+    .contact-form textarea {
+      height: 120px;
+      resize: none;
+    }
+
+    .contact-form button {
+      background-color: #A9BD4D;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      float: right;
+      transition: background-color 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background-color: #FFB4B4;
+    }
+
+    footer {
+      background-color: #F4BFBF;
+      color: #3a3a3a;
+      padding: 20px;
+      text-align: center;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="Image\Untitled-1.png" alt="Ananta Academy Logo" class="logo">
+    <h1>Ananta Academy</h1>
+  </header>
+  
+  <nav>
+    <a href="courses.html" class="courses">Courses</a>
+    <a href="homeworks.html">Homework</a>
+    <a href="Daftaronlineclass.html">Online Class</a>
+    <a href="question.html">Question</a>
+    <a href="test.html">Test</a>
+    <a href="contactus.html">Contact</a>
+  </nav>
+
+  <div class="container">
+    <div class="contact-info">
+      <h2>Contact Company</h2>
+      <p>Address : Jl Sokearno Hatta KM 20</p>
+      <p>City : Bandung</p>
+      <p>Country : Indonesia</p>
+      <p>Phone : +62-823-456-7890</p>
+      <p>Email : anantaacademy@company.com</p>
+    </div>
+    <div class="contact-form">
+      <h2>Contact Us</h2>
+      <form id="contactForm" action="thankyou.html" method="POST"> <!-- Tambahkan action dan method pada form -->
+        <input type="text" id="name" name="name" placeholder="Your name" required>
+        <br>
+        <input type="text" id="email" name="email" placeholder="Your email" required>
+        <br>
+        <textarea id="message" name="message" placeholder="Your message" required></textarea>
+        <br>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var message = document.getElementById("message").value;
+
+      // Kirim data pesan ke server atau lakukan operasi lain sesuai kebutuhan
+      console.log("Name: " + name);
+      console.log("Email: " + email);
+      console.log("Message: " + message);
+
+      // Reset form setelah pengiriman
+      document.getElementById("contactForm").reset();
+    });
+  </script>
+
+<footer>
+  &copy; 2023 Ananta Academy. All rights reserved.
+</footer>
+
+</body>
+</html>

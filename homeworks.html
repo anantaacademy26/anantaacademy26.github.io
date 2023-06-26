@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Daftar Tugas</title>
+  <style>
+    header {
+      background-color: #F4BFBF;
+      padding: 0px;
+      text-align: left;
+      display: flex;
+      align-items: center;
+    }
+    .logo {
+      width: 150px; /* Ubah ukuran avatar sesuai dengan kebutuhan */
+      height: 150px; /* Ubah ukuran avatar sesuai dengan kebutuhan */
+      margin-right: 10px;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #FAF0D7;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    h1 {
+      color: #333;
+      margin: 20px;
+    }
+
+    nav {
+      background-color: #FFD9C0;
+      color: #424242;
+      padding: 10px;
+      text-align: right;
+    }
+    
+    nav a {
+      color: #3b2d2d;
+      text-decoration: none;
+      margin: 10px;
+      background-color: #FFD9C0;
+    }
+    
+    nav a.Courses {
+      background-color: #f30000; /* Warna latar belakang navigasi "Courses" */
+    }
+
+    .assignment-list {
+      margin-top: 20px;
+      list-style: none;
+      padding: 0;
+      margin: 20px;
+    }
+
+    .assignment {
+      margin-bottom: 20px;
+      padding: 20px;
+      background-color: #FFE9AE;
+;
+      border: 1px solid #171511;
+      border-radius: 4px;
+    }
+
+    .assignment .title {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .assignment .description {
+      margin-bottom: 10px;
+    }
+
+    .assignment .due-date {
+      color: #d52c2c;
+    }
+
+    footer {
+      background-color: #F4BFBF;
+      color: #3a3a3a;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="Image\Untitled-1.png" alt="Ananta Academy Logo" class="logo">
+    <h1>Ananta Academy</h1>
+  </header>
+
+  <nav>
+    <a href="courses.html" class="courses">Courses</a>
+    <a href="homeworks.html">Homework</a>
+    <a href="Daftaronlineclass.html">Online Class</a>
+    <a href="question.html">Question</a>
+    <a href="test.html">Test</a>
+    <a href="contactus.html">Contact</a>
+  </nav>
+
+  <h1>Homework</h1>
+  <ul class="assignment-list">
+    <li class="assignment" onclick="window.location.href='detailtugas1.html';">
+      <h2 class="title">Tugas 1 : Buatlah tujuh kalimat dengan menggunakan minimal dua tenses!</h2>
+      <p class="description">Baca materi sebelumnya.</p>
+      <p class="due-date">Due Date: 25 Juni 2023</p>
+    </li>
+    <li class="assignment" onclick="window.location.href='detailtugas2.html';">
+      <h2 class="title">Tugas 2 : Buatlah paragraf yang menggunakan Relative Clause untuk menggambarkan orang atau benda!</h2>
+      <p class="description">Baca materi sebelumnya.</p>
+      <p class="due-date">Due Date: 1 Juli 2023</p>
+    </li>
+  </ul>
+
+  <footer>
+    &copy; 2023 Ananta Academy. All rights reserved.
+  </footer>
+
+</body>
+</html>

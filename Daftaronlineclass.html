@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Class - Ananta Academy</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0px;
+            background-color: #FAF0D7;
+        }
+
+        header {
+            background-color: #F4BFBF;
+            padding: 0px;
+            text-align: left;
+            display: flex;
+            align-items: center;
+        }
+
+        nav {
+            background-color: #FFD9C0;
+            color: #424242;
+            padding: 10px;
+            text-align: right;
+        }
+    
+        nav a {
+            color: #3b2d2d;
+            text-decoration: none;
+            margin: 10px;
+            background-color: #FFD9C0;
+        }
+    
+        nav a.Courses {
+            background-color: #f30000; /* Warna latar belakang navigasi "Courses" */
+        }
+
+        
+        h1 {
+            text-align: center;
+            color: #3E3E3E;
+        }
+
+        .logo {
+            width: 150px; /* Ubah ukuran avatar sesuai dengan kebutuhan */
+            height: 150px; /* Ubah ukuran avatar sesuai dengan kebutuhan */
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .course-list {
+            list-style: none;
+            padding: 0;
+            margin: 20px;
+        }
+
+        .course-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .course-item img {
+            width: 100px;
+            height: auto;
+            margin-right: 20px;
+            border-radius: 5px;
+            object-fit: contain;
+        }
+
+        .course-item:nth-child(2) img {
+            transform: scale(1.6); /* Mengubah ukuran foto kedua */
+        }
+
+        .course-item .course-info {
+            flex: 1;
+        }
+
+        .course-item h2 {
+            margin: 0;
+            color: #2C2C2C;
+        }
+
+        .course-item p {
+            margin: 5px 0;
+            color: #777777;
+        }
+
+        .course-item a {
+            display: inline-block;
+            padding: 5px 10px;
+            background-color: #A9BD4D;
+            color: #FFFFFF;
+            text-decoration: none;
+            border-radius: 3px;
+        }
+
+        footer {
+            background-color: #F4BFBF;
+            color: #3a3a3a;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="Image\Untitled-1.png" alt="Ananta Academy Logo" class="logo">
+        <h1>Ananta Academy</h1>
+      </header>
+
+    <nav>
+        <a href="courses.html" class="courses">Courses</a>
+        <a href="homeworks.html">Homework</a>
+        <a href="Daftaronlineclass.html">Online Class</a>
+        <a href="question.html">Question</a>
+        <a href="test.html">Test</a>
+        <a href="contactus.html">Contact</a>
+    </nav>
+
+    <ul class="course-list">
+        <li class="course-item">
+            <img src="Image/75-Mumtaz.png" alt="Course 1">
+            <div class="course-info">
+                <h2>1. Speaking Training</h2>
+                <p>MR. Bagas</p>
+                <a href="onlineclass1.html">Enroll Now</a>
+            </div>
+        </li>
+        <li class="course-item">
+            <img src="Image/82 - Lathif.png" alt="Course 2">
+            <div class="course-info">
+                <h2>2. Verb</h2>
+                <p>Profesor Johnson</p>
+                <a href="onlineclass2.html">Enroll Now</a>
+            </div>
+        </li>
+        <li class="course-item">
+            <img src="Image/84 - Fariha.PNG" alt="Course 3">
+            <div class="course-info">
+                <h2>3. Writing CV</h2>
+                <p>Mrs. Bella</p>
+                <a href="onlineclass3.html">Enroll Now</a>
+            </div>
+        </li>
+    </ul>
+    <footer>
+        &copy; 2023 Ananta Academy. All rights reserved.
+    </footer>
+</body>
+</html>

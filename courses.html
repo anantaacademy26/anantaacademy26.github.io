@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Online Learning - Homepage</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #FAF0D7;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    
+    header {
+      background-color: #F4BFBF;
+      padding: 0px;
+      text-align: left;
+      display: flex;
+      align-items: center;
+    }
+    
+    h1 {
+      margin: 0;
+      color: #333333;
+      display: flex;
+      align-items: center;
+    }
+    
+    .logo {
+      width: 150px;
+      height: 150px;
+      margin-right: 5px;
+    }
+    
+    nav {
+      background-color: #FFD9C0;
+      color: #424242;
+      padding: 10px;
+      text-align: right;
+    }
+    
+    nav a {
+      color: #3b2d2d;
+      text-decoration: none;
+      margin: 10px;
+      background-color: #FFD9C0;
+    }
+    
+    nav a.Courses {
+      background-color: #f30000; /* Warna latar belakang navigasi "Courses" */
+    }
+    
+    section {
+      padding: 30px;
+    }
+    
+    .hero-image {
+      width: 100%;
+      height: 200px; 
+      background-image: url("Image\Untitled-2.png");
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .hero-image h2 {
+      color: #F4BFBF;
+      font-size: 60px;
+      text-align: center;
+      text-shadow:
+        -1px -1px 1px #ff5280,
+        1px -1px 1px #ff5280,
+        -1px 1px 1px #ff5280,
+        1px 1px 1px #ff5280;
+    }
+    
+    footer {
+      background-color: #F4BFBF;
+      color: #3a3a3a;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-gap: 20px;
+      max-width: 1200px;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    .card-image {
+      width: 100%;
+      height: 200px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .card-description {
+      font-size: 13px;
+      color: #777;
+      margin-bottom: 20px;
+    }
+
+    .card-link {
+      display: inline-block;
+      background-color: #A9BD4D;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+
+    .card-link:hover {
+      background-color: #FFB4B4;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="Image\Untitled-1.png" alt="Ananta Academy Logo" class="logo">
+    <h1>Ananta Academy</h1>
+  </header>
+  
+  <nav>
+    <a href="courses.html" class="courses">Courses</a>
+    <a href="homeworks.html">Homework</a>
+    <a href="Daftaronlineclass.html">Online Class</a>
+    <a href="question.html">Question</a>
+    <a href="test.html">Test</a>
+    <a href="contactus.html">Contact</a>
+  </nav>
+  
+  <section>
+    <div class="hero-image">
+      <h2>Welcome to Ananta Academy!</h2>
+    </div>
+    
+    <div class="card-container">
+      <div class="card">
+        <div class="card-image" style="background-image: url('https://images.pexels.com/photos/3851578/pexels-photo-3851578.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');"></div>
+        <div class="card-content">
+          <h2 class="card-title">Tense</h2>
+          <p class="card-description">Tense adalah bentuk kata kerja dalam bahasa Inggris untuk menunjukkan waktu...</p>
+          <a href="Tense .html" class="card-link">Lihat Selengkapnya</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-image" style="background-image: url('https://images.pexels.com/photos/5676740/pexels-photo-5676740.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');"></div>
+        <div class="card-content">
+          <h2 class="card-title">Grammar</h2>
+          <p class="card-description">Grammar adalah istilah yang digunakan untuk kalimat yang terstruktur dengan baik dan lengkap...</p>
+          <a href="Grammar.html" class="card-link">Lihat Selengkapnya</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-image" style="background-image: url('https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');"></div>
+        <div class="card-content">
+          <h2 class="card-title">Bussines English</h2>
+          <p class="card-description">English for business ini mengacu pada bentuk bahasa Inggris yang secara khusus digunakan untuk keperluan formal..</p>
+          <a href="Business English.html" class="card-link">Lihat Selengkapnya</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-image" style="background-image: url('https://images.pexels.com/photos/109919/pexels-photo-109919.jpeg?auto=compress&cs=tinysrgb&w=600');"></div>
+        <div class="card-content">
+          <h2 class="card-title">Idiom</h2>
+          <p class="card-description">Idiom adalah bentuk ujaran yang maknanya sudah menyatu dan tidak dapat ditafsirkan dari makna-makna unsur pembentuknya...</p>
+          <a href="idiom.html" class="card-link">Lihat Selengkapnya</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-image" style="background-image: url('https://images.pexels.com/photos/7114420/pexels-photo-7114420.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');"></div>
+        <div class="card-content">
+          <h2 class="card-title">Relative Clauses</h2>
+          <p class="card-description">Relative clause adalah jenis dari dependent clause atau klausa terikat yang tidak dapat berdiri sendiri...</p>
+          <a href="relative clauses.html" class="card-link">Lihat Selengkapnya</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-image" style="background-image: url('https://images.pexels.com/photos/9540539/pexels-photo-9540539.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');"></div>
+        <div class="card-content">
+          <h2 class="card-title">Modal Verb</h2>
+          <p class="card-description">Modal verb merupakan kategori verb yang berbeda dari verb atau kata kerja yang biasanya...</p>
+          <a href="Modal verb.html" class="card-link">Lihat Selengkapnya</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <footer>
+    &copy; 2023 Ananta Academy. All rights reserved.
+  </footer>
+</body>
+</html>

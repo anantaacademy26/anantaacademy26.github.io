@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Learning - Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F4F4F4;
+        }
+
+        header {
+            background-color: #FFD9C0;
+            padding: 20px;
+            text-align: center;
+            color: #333;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .question-card {
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .question-card h2 {
+            color: #333;
+            margin-top: 0;
+        }
+
+        .question-card p {
+            color: #666;
+        }
+
+        .options {
+            margin-top: 10px;
+        }
+
+        .options label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .options input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        .submit-button {
+            background-color: #A9BD4D;
+            color: #FFFFFF;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-button:hover {
+            background-color: #FFB4B4;
+        }
+
+        footer {
+            background-color: #FFD9C0;
+            color: #333;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Test 2</h1>
+    </header>
+
+    <main>
+        <div class="question-card">
+            <h2>Question 1</h2>
+            <p>Choose the correct sentence with the verb "run" in the present simple tense:</p>
+            <div class="options">
+                <label>
+                    <input type="radio" name="question1" value="option1">
+                    She runs to the park every morning.
+                </label>
+                <label>
+                    <input type="radio" name="question1" value="option2">
+                    I will run a marathon next month.
+                </label>
+                <label>
+                    <input type="radio" name="question1" value="option3">
+                    They are running in the race right now.
+                </label>
+                <label>
+                    <input type="radio" name="question1" value="option4">
+                    We ran to catch the bus yesterday.
+                </label>
+            </div>
+        </div>
+
+        <div class="question-card">
+            <h2>Question 2</h2>
+            <p>Identify the sentence in the past continuous tense with the verb "sing":</p>
+            <div class="options">
+                <label>
+                    <input type="radio" name="question2" value="option1">
+                    They are singing a song together.
+                </label>
+                <label>
+                    <input type="radio" name="question2" value="option2">
+                    She has been singing for hours.
+                </label>
+                <label>
+                    <input type="radio" name="question2" value="option3">
+                    We sang at the concert last night.
+                </label>
+                <label>
+                    <input type="radio" name="question2" value="option4">
+                    He will sing at the party tomorrow.
+                </label>
+            </div>
+        </div>
+
+        <div class="question-card">
+            <h2>Question 3</h2>
+            <p>Choose the correct sentence with the verb "eat" in the future simple tense:</p>
+            <div class="options">
+                <label>
+                    <input type="radio" name="question3" value="option1">
+                    I eat dinner right now.
+                </label>
+                <label>
+                    <input type="radio" name="question3" value="option2">
+                    They will eat at the restaurant tonight.
+                </label>
+                <label>
+                    <input type="radio" name="question3" value="option3">
+                    She has eaten lunch already.
+                </label>
+                <label>
+                    <input type="radio" name="question3" value="option4">
+                    We have been eating all day.
+                </label>
+            </div>
+        </div>
+
+        <div class="question-card">
+            <h2>Question 4</h2>
+            <p>Choose the correct sentence with the verb "dance" in the present continuous tense:</p>
+            <div class="options">
+                <label>
+                    <input type="radio" name="question4" value="option1">
+                    He dances at the party last night.
+                </label>
+                <label>
+                    <input type="radio" name="question4" value="option2">
+                    They have danced together before.
+                </label>
+                <label>
+                    <input type="radio" name="question4" value="option3">
+                    She is dancing in the ballet performance now.
+                </label>
+                <label>
+                    <input type="radio" name="question4" value="option4">
+                    We will dance at the wedding next week.
+                </label>
+            </div>
+        </div>
+
+        <div class="question-card">
+            <h2>Question 5</h2>
+            <p>Choose the correct sentence with the verb "study" in the future perfect tense:</p>
+            <div class="options">
+                <label>
+                    <input type="radio" name="question5" value="option1">
+                    I have studied for the exam last night.
+                </label>
+                <label>
+                    <input type="radio" name="question5" value="option2">
+                    They will study at the library tomorrow.
+                </label>
+                <label>
+                    <input type="radio" name="question5" value="option3">
+                    She is studying for the test right now.
+                </label>
+                <label>
+                    <input type="radio" name="question5" value="option4">
+                    We will have studied all the lessons by next month.
+                </label>
+            </div>
+        </div>
+
+        <button class="submit-button" onclick="submitTest()">Kirim</button>
+    </main>
+
+    <footer>
+        &copy; 2023 Online Learning. All rights reserved.
+    </footer>
+    <script>
+        function submitTest() {
+            // Melakukan pengalihan ke halaman "result.html" saat tombol diklik
+            window.location.href = "aftertest.html";
+        }
+    </script>
+</body>
+</html>

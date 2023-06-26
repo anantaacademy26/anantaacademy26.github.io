@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Learning - Hasil Tes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F4F4F4;
+        }
+
+        /* Kode CSS lainnya */
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Hasil Tes</h1>
+    </header>
+
+    <main>
+        <div id="resultContainer">
+            <!-- Konten Hasil Tes -->
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2023 Ananta Academy. All rights reserved.
+    </footer>
+
+    <script>
+        // Mengambil data tes yang dikirim dari halaman tes
+        var urlParams = new URLSearchParams(window.location.search);
+        var formData = new FormData();
+        for (const pair of urlParams) {
+            formData.append(pair[0], pair[1]);
+        }
+
+        // Proses data tes dan tampilkan hasil
+        var resultContainer = document.getElementById('resultContainer');
+        var results = [];
+        for (const [key, value] of formData.entries()) {
+            results.push('<p>' + key + ': ' + value + '</p>');
+        }
+        resultContainer.innerHTML = results.join('');
+    </script>
+</body>
+</html>

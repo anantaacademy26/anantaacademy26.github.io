@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Question Chat</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #FAF0D7;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #FFFFFF;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    header {
+      background-color: #F4BFBF;
+      padding: 0px;
+      text-align: left;
+      display: flex;
+      align-items: center;
+    }
+
+    h1 {
+      margin: 0;
+      color: #333333;
+      margin-left: 10px;
+    }
+
+    footer {
+      background-color: #F4BFBF;
+      color: #3a3a3a;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .chat-box {
+      height: 300px;
+      overflow-y: scroll;
+      padding: 10px;
+      background-color: #FFFFFF;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .message {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 10px;
+    }
+
+    .avatar {
+      width: 30px; /* Ubah ukuran avatar sesuai dengan kebutuhan */
+      height: 30px; /* Ubah ukuran avatar sesuai dengan kebutuhan */
+      border-radius: 30%;
+      margin-right: 10px;
+    }
+
+    .logo {
+      width: 150px; /* Ubah ukuran avatar sesuai dengan kebutuhan */
+      height: 150px; /* Ubah ukuran avatar sesuai dengan kebutuhan */
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    nav {
+      background-color: #FFD9C0;
+      color: #424242;
+      padding: 10px;
+      text-align: right;
+    }
+    
+    nav a {
+      color: #3b2d2d;
+      text-decoration: none;
+      margin: 10px;
+      background-color: #FFD9C0;
+    }
+    
+    nav a.Courses {
+      background-color: #f30000; /* Warna latar belakang navigasi "Courses" */
+    }
+
+    .user-message .avatar {
+      background-color: #FFB4B4;
+    }
+
+    .bot-message .avatar {
+      background-color: #A9BD4D;
+    }
+
+    .content {
+      background-color: #F0F0F0;
+      padding: 8px;
+      border-radius: 8px;
+    }
+
+    .input-box {
+      display: flex;
+      margin-top: 10px;
+    }
+
+    .input-box input {
+      flex-grow: 1;
+      padding: 8px;
+      border-radius: 4px;
+      border: none;
+    }
+
+    .input-box button {
+      padding: 8px 16px;
+      margin-left: 10px;
+      border: none;
+      border-radius: 4px;
+      background-color: #A9BD4D;
+      color: #FFFFFF;
+      cursor: pointer;
+    }
+
+    .input-box button:hover {
+      background-color: #9CB949;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="Image\Untitled-1.png" alt="Ananta Academy Logo" class="logo">
+    <h1>Ananta Academy</h1>
+  </header>
+
+  <nav>
+    <a href="courses.html" class="courses">Courses</a>
+    <a href="homeworks.html">Homework</a>
+    <a href="Daftaronlineclass.html">Online Class</a>
+    <a href="question.html">Question</a>
+    <a href="test.html">Test</a>
+    <a href="contactus.html">Contact</a>
+  </nav>
+
+  <div class="container">
+    <div class="chat-box" id="chat-box">
+      <div class="message bot-message">
+        <div class="avatar"></div>
+        <div class="content">
+          <p>Welcome to the question chat! How can I assist you today?</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="input-box">
+      <input type="text" id="message-input" placeholder="Type your question">
+      <button type="button" id="send-button">Send</button>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2023 Ananta Academy. All rights reserved.
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var sendButton = document.getElementById("send-button");
+      var messageInput = document.getElementById("message-input");
+      var chatBox = document.getElementById("chat-box");
+
+      sendButton.addEventListener("click", function() {
+        var messageContent = messageInput.value.trim();
+        if (messageContent !== "") {
+          sendMessage(messageContent);
+          messageInput.value = "";
+        }
+      });
+
+      function sendMessage(messageContent) {
+        var message = createMessage("user", messageContent);
+        chatBox.appendChild(message);
+
+        // Get bot's reply based on keywords
+        var botReply = getBotReply(messageContent);
+        var botMessage = createMessage("bot", botReply);
+        setTimeout(function() {
+          chatBox.appendChild(botMessage);
+          chatBox.scrollTop = chatBox.scrollHeight;
+        }, 500);
+      }
+
+      function createMessage(sender, content) {
+        var message = document.createElement("div");
+        message.className = "message " + sender + "-message";
+
+        var avatar = document.createElement("div");
+        avatar.className = "avatar";
+
+        var messageContent = document.createElement("div");
+        messageContent.className = "content";
+
+        var messageText = document.createElement("p");
+        messageText.textContent = content;
+
+        messageContent.appendChild(messageText);
+        message.appendChild(avatar);
+        message.appendChild(messageContent);
+
+        return message;
+      }
+
+      function getBotReply(messageContent) {
+        var replies = {
+          "hi": "Hello!",
+          "how are you": "I'm doing well, thank you!",
+          "what's your name": "I'm a question chatbot.",
+          "thank you": "You're welcome!",
+          "can you help me": "of course",
+          "default": "our trainer will chat you, please wait"
+        };
+
+        var lowercaseMessage = messageContent.toLowerCase();
+        for (var keyword in replies) {
+          if (lowercaseMessage.includes(keyword)) {
+            return replies[keyword];
+          }
+        }
+
+        return replies["default"];
+      }
+    });
+  </script>
+</body>
+</html>
